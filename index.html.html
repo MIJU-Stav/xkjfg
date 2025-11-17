@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIJU Stav s.r.o.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Верхнее меню
+        document.addEventListener("mousemove", (e) => {
+            const menu = document.querySelector(".menu");
+            if (e.clientY < 80) {
+                menu.classList.add("show");
+            } else {
+                menu.classList.remove("show");
+            }
+        });
+
+        // Прокрут
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('a[href^="#"]').forEach(link => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 1,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<header>
+    <!-- Верхняя красная строка -->
+    <div class="topbar">
+        <span>MIJU Stav s.r.o.</span>
+    </div>
+
+    <!-- Меню которое выезжает -->
+    <nav class="menu">
+        <a href="#hero">Domov</a>
+        <a href="#onas">O nás</a>
+        <a href="#sluzby">Služby</a>
+        <a href="#etapy">Postup</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+</header>
+
+<section id="hero" class="hero fade-in">
+    <div class="hero-content">
+        <h1>Moderné stavebné riešenia</h1>
+        <p>Kvalita, presnosť a profesionálny prístup</p>
+        <a href="#kontakt" class="btn">Kontaktovať</a>
+    </div>
+</section>
+
+<section id="onas" class="onas fade-in">
+    <h2>O nás</h2>
+    <p>
+      Naša spoločnosť je tím skúsených odborníkov, ktorý poskytuje kompletný balík stavebných služieb „na kľúč“. Vykonávame všetky druhy stavebných prác, počnúc projektovaním a prípravnými etapami až po dokončovacie práce a úpravu okolia.
+
+  Pracujeme na rezidenčných aj komerčných objektoch, pričom garantujeme kvalitu, spoľahlivosť a dodržiavanie termínov. Používame moderné technológie, certifikované materiály a individuálny prístup ku každému projektu.
+
+  Naše výhody:
+
+  Bohaté skúsenosti so stavbami rôznej náročnosti
+
+  Kvalifikovaní majstri a inžinieri
+
+  Transparentnosť všetkých pracovných etáp
+
+  Záruka na vykonané práce
+
+  Individuálne riešenia pre každého klienta
+
+  Snažíme sa vytvárať priestory, ktoré slúžia dlhé roky a zostávajú pohodlné, bezpečné a funkčné. Keď nám dôverujete, vyberáte si profesionalitu, zodpovednosť a vysokú kvalitu stavebných prác.
+    </p>
+</section>
+
+<section id="sluzby" class="sluzby fade-in">
+    <h2>Naše služby</h2>
+
+    <div class="services-container">
+        <div class="card"><h3>Stavebné práce na kľúč</h3></div>
+        <div class="card"><h3>Rekonštrukcie bytov a domov</h3></div>
+        <div class="card"><h3>Murárske a omietkárske práce</h3></div>
+        <div class="card"><h3>Pokládka obkladov a dlažby</h3></div>
+        <div class="card"><h3>Zatepľovanie fasád a izolácie</h3></div>
+        <div class="card"><h3>Kopanie</h3></div>
+        <div class="card"><h3>Farbenie</h3></div>
+        <div class="card"><h3>Elektrikári</h3></div>
+    </div>
+</section>
+
+<section id="etapy" class="etapy fade-in">
+    <h2>Postup práce</h2>
+
+    <div class="steps">
+        <div class="step">1.   Konzultácia</div>
+        <div class="step">2.   Cenová ponuka</div>
+        <div class="step">3.   Príprava</div>
+        <div class="step">4.   Realizácia</div>
+        <div class="step">5.   Odovzdanie</div>
+    </div>
+</section>
+
+<section id="kontakt" class="kontakt fade-in">
+    <h2>Kontakt</h2>
+
+    <div class="contact-buttons">
+        <a href="tel:+421950683578" class="btn contact-btn">📞 Zavolať</a>
+        <a href="https://wa.me/421950683578" target="_blank" class="btn contact-btn whatsapp-btn">🟢 WhatsApp</a>
+    </div>
+</section>
+
+<footer>
+    © 2025 MIJU Stav s.r.o.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/421950683578" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+</body>
+</html>
